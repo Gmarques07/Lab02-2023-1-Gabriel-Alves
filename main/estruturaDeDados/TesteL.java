@@ -90,9 +90,11 @@ public class TesteL implements Lista{
         if (tamanho == list.length || buscaIndice < 0 || buscaIndice > tamanho) {
             return;
         }
+    
         for (int i = tamanho; i > buscaIndice; i--) {
             list[i] = list[i - 1];
-        }
+        } 
+    
         list[buscaIndice] = valor;
         tamanho++;
     }
@@ -120,7 +122,6 @@ public class TesteL implements Lista{
         for (int i = indice; i < tamanho - 1; i++) {
             list[i] = list[i + 1];
         }
-        list[tamanho - 1] = 0;
         tamanho--;
     }
 
@@ -142,6 +143,6 @@ public class TesteL implements Lista{
             return;
         }
         list[tamanho - 1] = 0;
-        tamanho--;
+        tamanho--; 
     }
 }
